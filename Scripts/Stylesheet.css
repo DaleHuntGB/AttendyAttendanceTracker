@@ -1,11 +1,8 @@
 /* Global */
 :root {
-    --clr-PrimaryBG: #1A1A1A;
-    --clr-SecondaryBG: #2A2A2A;
-    --clr-TertiaryBG: #3A3A3A;
-    --clr-Accent: #FFFFFF;
-    --clr-SecondaryAccent: #8080FF;
-    --clr-Text: #CCCCCC;
+    --clr-PrimaryBG: #FFFFFF;
+    --clr-Accent: #F6F6F6;
+    --clr-Text: #292929;
     /* Mobile Sizing */
     --maxWidth: 420px;
     --maxHeight: 900px;
@@ -17,7 +14,6 @@
     margin: 0em auto;
     padding: 0em;
     box-sizing: border-box;
-    color: var(--clr-Text);
     max-width: var(--maxWidth);
     max-height: var(--maxHeight);
     text-align: center;
@@ -25,13 +21,12 @@
     line-height: 1.25em;
 }
 /* Check-In Page */
-
 body
-{
-    /* Texture */
-    background-image: radial-gradient(var(--clr-SecondaryAccent) 1px, transparent 1px), radial-gradient(var(--clr-SecondaryAccent) 1px, var(--clr-SecondaryBG) 1px);
-    background-size: 48px 48px;
-    background-position: 0 0, 24px 24px;
+{   
+    /* Pastel Background */
+    background-image: url("/Images/Backgrounds/Darken/Background_02.png");
+    background-size: var(--maxWidth) var(--maxHeight);
+    background-repeat: no-repeat;
 }
 
 .CheckInContainer {
@@ -40,12 +35,18 @@ body
     justify-content: center;
     align-items: center;
     row-gap: 3em;
-
+    padding-top: 1em;
 }
 
 .CheckInHeader
 {
-    padding: 3em;
+    color: var(--clr-Accent);
+}
+
+.ModuleTitle 
+{
+    width: var(--maxWidth);
+    padding-top: 1em;
 }
 
 .InputFields 
@@ -63,7 +64,8 @@ body
     height: 2.25em;
     border-radius: var(--BorderRadius);
     width: 15em;
-    background-color: var(--clr-TertiaryBG)
+    background-color: var(--clr-PrimaryBG);
+    color: var(--clr-Text);
 }
 
 .SubmitButton
@@ -72,10 +74,19 @@ body
     border-radius: var(--BorderRadius);
     height: 3em;
     width: 10em;
-    background-color: var(--clr-TertiaryBG);
+    background-color: var(--clr-PrimaryBG);
+    color: var(--clr-Text);
     text-align: center;
     text-decoration: none;
     margin: auto;
+}
+
+.CheckInFooter
+{
+    background-color: var(--clr-Accent);
+    width: var(--maxWidth);
+    position: fixed;
+    bottom: 0;
 }
 
 /* Home Page */
