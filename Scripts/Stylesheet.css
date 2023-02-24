@@ -1,26 +1,81 @@
 /* Global */
 :root {
     --clr-PrimaryBG: #1A1A1A;
-    --clr-SecondaryBG: #3A3A3A;
+    --clr-SecondaryBG: #2A2A2A;
+    --clr-TertiaryBG: #3A3A3A;
     --clr-Accent: #FFFFFF;
+    --clr-SecondaryAccent: #8080FF;
     --clr-Text: #CCCCCC;
-}
-* {
-    margin: 0em;
-    padding: 0em;
-    box-sizing: border-box;
-    background-color: var(--clr-PrimaryBG);
-    color: var(--clr-Text);
+    /* Mobile Sizing */
+    --maxWidth: 420px;
+    --maxHeight: 900px;
+    /* Border Radius */
+    --BorderRadius: 3px;
 }
 
+* {
+    margin: 0em auto;
+    padding: 0em;
+    box-sizing: border-box;
+    color: var(--clr-Text);
+    max-width: var(--maxWidth);
+    max-height: var(--maxHeight);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.25em;
+}
 /* Check-In Page */
+
+body
+{
+    /* Texture */
+    background-image: radial-gradient(var(--clr-SecondaryAccent) 1px, transparent 1px), radial-gradient(var(--clr-SecondaryAccent) 1px, var(--clr-SecondaryBG) 1px);
+    background-size: 48px 48px;
+    background-position: 0 0, 24px 24px;
+}
 
 .CheckInContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    column-gap: 3em;
+    row-gap: 3em;
+
+}
+
+.CheckInHeader
+{
+    padding: 3em;
+}
+
+.InputFields 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3em;
+}
+
+.InputFields > input 
+{
+    border: solid 1px var(--clr-Accent);
+    height: 2.25em;
+    border-radius: var(--BorderRadius);
+    width: 15em;
+    background-color: var(--clr-TertiaryBG)
+}
+
+.SubmitButton
+{
+    border: solid 1px var(--clr-Accent);
+    border-radius: var(--BorderRadius);
+    height: 3em;
+    width: 10em;
+    background-color: var(--clr-TertiaryBG);
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
 }
 
 /* Home Page */

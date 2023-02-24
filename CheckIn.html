@@ -7,20 +7,25 @@
     <title>Check-In</title>
     <!-- Scripts -->
     <link rel="stylesheet" href="Scripts/Stylesheet.css">
-</head>
+    <script src="Scripts/JavaScript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head> 
 <body>
     <div class="CheckInContainer">
         <div class="CheckInHeader">
-            <h1>Welcome To Module</h1>
+            <h1 class="StudentFirstName">Welcome</h1>
+            <h2>CI536: Integrated Group Project</h2>
+
         </div>
         <div class="InputFields">
-            <input type="text" value="Your Name" name="StudentName" id="StudentName">
-            <input type="text" value="Room Number" name="RoomNumber" id="RoomNumber">
-            <input type="time" value="09:00" name="StartTime" id="StartTime">
-        </div>
-        <div class="SubmitButton">
-            <button type="submit">Submit!</button>
-        </div>
+            <input type="text" value="Your Name" name="StudentName" id="StudentName" required>
+            <input type="text" value="Room #" name="RoomNumber" id="RoomNumber" required>
+            <input type="time" name="StartTime" id="StartTime" required>
+        </div> 
+        <button type="submit" class="SubmitButton">Submit!</button>
     </div>
 </body>
+
 </html>
