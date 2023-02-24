@@ -6,9 +6,6 @@
     --clr-Border: #1A1A1A;
     --clr-Text: #292929;
     --clr-DropShadow: #2A2A2A;
-    /* Fixed Sizing */
-    --maxWidth: 420px;
-    --maxHeight: 900px;
     /* Fixed Values */
     --BorderRadius: 3px;
     --DropShadow: 5px;
@@ -18,23 +15,29 @@
     font-family: "Avantgarde";
     src: url(/Fonts/Avantgarde.TTF);
 }
+
 * {
-    margin: 0em auto;
     padding: 0em;
     box-sizing: border-box;
-    max-width: var(--maxWidth);
-    max-height: var(--maxHeight);
     text-align: center;
     font-family: "Avantgarde";
     line-height: 1.25em;
 }
+
 /* Check-In Page */
+
+html
+{
+    margin: 0em auto;
+}
+
 body
 {   
     /* Pastel Background */
     background-image: url("/Images/Backgrounds/Darken/Background_02.png");
-    background-size: var(--maxWidth) var(--maxHeight);
-    background-repeat: no-repeat;
+    background-position-x: center;
+    min-width: 420px;
+    min-height: 900px;
 }
 
 .CheckInContainer {
@@ -53,7 +56,6 @@ body
 
 .ModuleTitle 
 {
-    width: var(--maxWidth);
     padding-top: 1em;
 }
 
@@ -94,8 +96,8 @@ body
 .CheckInFooter
 {
     background-color: var(--clr-Accent);
-    width: var(--maxWidth);
     position: fixed;
+    width: 100%;
     bottom: 0;
 }
 
