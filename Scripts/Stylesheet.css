@@ -77,6 +77,7 @@ body
     background-color: var(--clr-PrimaryBG);
     color: var(--clr-Text);
     box-shadow: var(--DropShadow) var(--DropShadow) var(--DropShadowBlur) var(--clr-DropShadow);
+    user-select: all;
 }
 
 .SubmitButton
@@ -91,6 +92,11 @@ body
     text-decoration: none;
     margin: auto;
     box-shadow: var(--DropShadow) var(--DropShadow) var(--DropShadowBlur) var(--clr-DropShadow);
+}
+
+.SubmitButton:hover
+{
+    background-color: #CCCCCC;
 }
 
 .CheckInFooter
