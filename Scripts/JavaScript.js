@@ -13,14 +13,15 @@
 
 function UpdateTimeOnOpen() // Get and Update Time - DH.
 {
+    let StartTime = document.querySelector("#StartTime")
     let CurrentTime = new Date();
     let Hours = CurrentTime.getHours();
     let Minutes = CurrentTime.getMinutes();
     // Apparently HH:MM has to return a second digit so anything below 10 will need to be ammended with "0" - DH.
     if (Minutes < 10) { Minutes = "0" + Minutes; };
     // Store StartTime because we are not animals - DH.
-    let StartTime = Hours + ":" + Minutes;
-    document.querySelector("#StartTime").value = StartTime;
+    let FormattedTime = Hours + ":" + Minutes;
+    StartTime.value = FormattedTime;
 }
 
 function UpdateStudentName() // Demonstration Only - DH.
