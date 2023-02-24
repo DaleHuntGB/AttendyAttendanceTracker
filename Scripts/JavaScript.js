@@ -29,7 +29,7 @@ function UpdateStudentName() // Demonstration Only - DH.
     // Store it as a variable because we can - DH.
     let StudentFirstName = document.querySelector(".StudentFirstName");
     let StudentFirstNames = ["Beck", "Max", "Dale", "Artemi", "Lynx"]; 
-    let NumOfStudents = StudentFirstName.length;
+    let NumOfStudents = StudentFirstNames.length;
     let RandomizeStudent = StudentFirstNames[Math.floor(Math.random() * NumOfStudents)];
     StudentFirstName.textContent = "Welcome " + RandomizeStudent;
 }
