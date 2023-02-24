@@ -1,0 +1,26 @@
+/* Global */
+:root {
+    --clr-PrimaryBG: #1A1A1A;
+    --clr-SecondaryBG: #3A3A3A;
+    --clr-Accent: #FFFFFF;
+    --clr-Text: #CCCCCC;
+}
+* {
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+    background-color: var(--clr-PrimaryBG);
+    color: var(--clr-Text);
+}
+
+/* Check-In Page */
+
+.CheckInContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3em;
+}
+
+/* Home Page */
