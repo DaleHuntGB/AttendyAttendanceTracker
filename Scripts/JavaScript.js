@@ -1,43 +1,52 @@
-// Update Time
-function UpdateTimeOnOpen()
-{
-    let CurrentTime = new Date()
-    let Hours = CurrentTime.getHours()
-    let Minutes = CurrentTime.getMinutes()
+// === === === === === === === === === === === === === === === === === === === === === === === ===
+// COMMENTS FORMATTING:
+//
+// End comments with your initials please, so we can keep track.
+// 
+// INITIALS:
+// Dale Hunt: DH
+// Beck Farrington-Wheeler: BFW
+// Artemi Sementsenko: AS
+//
+// === === === === === === === === === === === === === === === === === === === === === === === ===
 
-    // JavaScript doesn't know what to do with non-double digits
-    if (Minutes < 10)
-    {
-        Minutes = "0" + Minutes;
-    }
-    
-    let StartTime = Hours + ":" + Minutes
-    
-    let TimeInput = document.querySelector("#StartTime")
-    
-    TimeInput.value = StartTime
+
+function UpdateTimeOnOpen() // Get and Update Time - DH.
+{
+    let CurrentTime = new Date();
+    let Hours = CurrentTime.getHours();
+    let Minutes = CurrentTime.getMinutes();
+    // Apparently HH:MM has to return a second digit so anything below 10 will need to be ammended with "0" - DH.
+    if (Minutes < 10) { Minutes = "0" + Minutes; };
+    // Store StartTime because we are not animals - DH.
+    let StartTime = Hours + ":" + Minutes;
+    document.querySelector("#StartTime").value = StartTime;
 }
 
-function UpdateStudentName() // Demonstration Only!
+function UpdateStudentName() // Demonstration Only - DH.
 {
-    let StudentFirstName = ["Beck", "Max", "Dale", "Artemi", "Lynx"]; 
-    let NumOfStudents = StudentFirstName.length
-    let RandomizeStudent = StudentFirstName[Math.floor(Math.random() * NumOfStudents)];
-    document.querySelector(".StudentFirstName").textContent = "Welcome " + RandomizeStudent;
+    // Store it as a variable because we can - DH.
+    let StudentFirstName = document.querySelector(".StudentFirstName");
+    let StudentFirstNames = ["Beck", "Max", "Dale", "Artemi", "Lynx"]; 
+    let NumOfStudents = StudentFirstName.length;
+    let RandomizeStudent = StudentFirstNames[Math.floor(Math.random() * NumOfStudents)];
+    StudentFirstName.textContent = "Welcome " + RandomizeStudent;
 }
 
-function UpdateModule()
+function UpdateModule() // Demonstration Only - DH.
 {
+    // Store it as a variable because we can - DH.
+    let ModuleTitle = document.querySelector(".ModuleTitle");
     let ModuleTitles = ["CI536: Integrated Group Project", "CI520: Narrative Game Design", "CI517: Game Engine Fundamentals"];
-    let NumOfModules = ModuleTitles.length
+    let NumOfModules = ModuleTitles.length;
     let RandomizeModules = ModuleTitles[Math.floor(Math.random() * NumOfModules)];
-    document.querySelector(".ModuleTitle").textContent = RandomizeModules;
+    ModuleTitle.textContent = RandomizeModules;
 }
 
-function OnWindowLoad()
+function OnWindowLoad() // If you can find a better way, do it, but this should work for now - DH.
 {
     UpdateTimeOnOpen();
-    UpdateStudentName()
+    UpdateStudentName();
     UpdateModule();
 }
 
