@@ -29,6 +29,8 @@
 html
 {
     margin: 0em auto;
+    height: 90%;
+    width: 90%;
 }
 
 body
@@ -40,7 +42,7 @@ body
     min-height: 900px;
 }
 
-.CheckInContainer {
+.CheckInContainer, .HomePageContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,7 +51,7 @@ body
     padding-top: 1em;
 }
 
-.CheckInHeader
+.CheckInHeader, .HomePageHeader
 {
     color: var(--clr-Accent);
 }
@@ -99,7 +101,7 @@ body
     background-color: #CCCCCC;
 }
 
-.CheckInFooter
+.CheckInFooter, .HomeFooter
 {
     background-color: var(--clr-Accent);
     position: fixed;
@@ -108,3 +110,53 @@ body
 }
 
 /* Home Page */
+
+.ModuleContainer 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 1em;
+    /* Colour */
+    background-color: var(--clr-Accent);
+    border: 1px solid var(--clr-Border);
+    border-radius: var(--BorderRadius);
+    box-shadow: var(--DropShadow) var(--DropShadow) var(--DropShadowBlur) var(--clr-DropShadow);
+}
+
+.ModuleContainer > div
+{
+    background-color: var(--clr-Accent);
+    padding: 1em;
+    margin-top: 0.25em;
+    width: 90%;
+}
+
+.OverallAttendanceSessions
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+}
+
+.OverallAttendanceSessionsHeaders
+{
+    color: var(--clr-Accent);
+}
+
+.AttendedText
+{
+    color: #40FF40;
+}
+
+.AbsentText
+{
+    color: #FF4040;
+}
+
+.TotalSessionsText
+{
+    color: var(--clr-Accent);
+}
